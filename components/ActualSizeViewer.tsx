@@ -13,27 +13,19 @@ import type { Artwork } from "@/lib/works";
 
 const UI_IDLE_MS = 2500;
 
-const PAN_ONLY_GESTURES: OpenSeadragon.GestureSettings = {
+const GESTURES: OpenSeadragon.GestureSettings = {
   dragToPan: true,
   flickEnabled: true,
-  scrollToZoom: false,
+  scrollToZoom: true,
+  pinchToZoom: true,
   clickToZoom: false,
   dblClickToZoom: false,
   dblClickDragToZoom: false,
-  pinchToZoom: false,
   pinchRotate: false,
 };
 
-const PAN_KEYS = new Set([
-  "ArrowUp",
-  "ArrowDown",
-  "ArrowLeft",
-  "ArrowRight",
-  "KeyW",
-  "KeyA",
-  "KeyS",
-  "KeyD",
-]);
+/** OSD shortcuts for rotate and flip; these would break the physical scale's orientation. */
+const BLOCKED_KEYS = new Set(["KeyR", "KeyF"]);
 
 const BROWSER_ZOOM_KEYS = new Set(["+", "-", "=", "_", "0"]);
 
@@ -44,6 +36,7 @@ export default function ActualSizeViewer({ work }: { work: Artwork }) {
   const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
   const viewerRef = useRef<OpenSeadragon.Viewer | null>(null);
+  const [isActualSize, setIsActualSize] = useState(true);
   const [status, setStatus] = useState<Status>("loading");
   const [rulerElement, setRulerElement] = useState<HTMLDivElement | null>(null);
   const showRuler = useShowRuler();
@@ -51,6 +44,7 @@ export default function ActualSizeViewer({ work }: { work: Artwork }) {
   const uiVisible = useIdleVisibility(UI_IDLE_MS);
 
   const close = useCallback(() => router.push("/"), [router]);
+  const resetToActualSize = useCallback(() => viewerRef.current?.viewport.goHome(), []);
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -91,35 +85,58 @@ export default function ActualSizeViewer({ work }: { work: Artwork }) {
         tileSources: work.iiifUrl,
         showNavigationControl: false,
         preserveImageSizeOnResize: true,
-        ...lockedZoom(targetWidthPx, container.clientWidth),
+        ...zoomLimits({
+          targetWidthPx,
+          container: { x: container.clientWidth, y: container.clientHeight },
+          aspect: work.heightMm / work.widthMm,
+        }),
         visibilityRatio: 0.1,
+        zoomPerScroll: 1.15,
         animationTime: 0.6,
         blendTime: 0.15,
-        gestureSettingsMouse: PAN_ONLY_GESTURES,
-        gestureSettingsTouch: PAN_ONLY_GESTURES,
-        gestureSettingsPen: PAN_ONLY_GESTURES,
-        gestureSettingsUnknown: PAN_ONLY_GESTURES,
+        gestureSettingsMouse: GESTURES,
+        gestureSettingsTouch: GESTURES,
+        gestureSettingsPen: GESTURES,
+        gestureSettingsUnknown: GESTURES,
       });
       viewerRef.current = viewer;
 
       // The container may not have its final size when the viewer is created, so the
       // 1:1 zoom (which is relative to container width) is re-derived from the live size.
       // "resize" fires after the new container size is known but before OSD re-zooms.
-      const syncLockedZoom = () => {
+      const syncZoomLimits = () => {
+        const image = viewer?.world.getItemAt(0);
+        if (!viewer || !image) return;
+        const { viewport } = viewer;
+        const { x, y } = image.source.dimensions;
+        Object.assign(
+          viewport,
+          zoomLimits({
+            targetWidthPx,
+            container: viewport.getContainerSize(),
+            aspect: y / x,
+            imageWidthPx: x,
+          }),
+        );
+      };
+
+      const syncIsActualSize = () => {
         if (!viewer) return;
         const { viewport } = viewer;
-        Object.assign(viewport, lockedZoom(targetWidthPx, viewport.getContainerSize().x));
+        const actualZoom = targetWidthPx / viewport.getContainerSize().x;
+        setIsActualSize(Math.abs(viewport.getZoom() / actualZoom - 1) < 0.005);
       };
 
       viewer.addHandler("open", () => {
-        syncLockedZoom();
+        syncZoomLimits();
         viewer?.viewport.goHome(true);
         setStatus("ready");
       });
-      viewer.addHandler("resize", syncLockedZoom);
+      viewer.addHandler("resize", syncZoomLimits);
+      viewer.addHandler("zoom", syncIsActualSize);
       viewer.addHandler("canvas-key", (e) => {
-        const { code, shiftKey } = e.originalEvent as KeyboardEvent;
-        if (shiftKey || !PAN_KEYS.has(code)) e.preventDefaultAction = true;
+        const { code } = e.originalEvent as KeyboardEvent;
+        if (BLOCKED_KEYS.has(code)) e.preventDefaultAction = true;
       });
       viewer.addHandler("open-failed", () => setStatus("error"));
       viewer.addHandler("canvas-double-click", (e) => {
@@ -174,25 +191,61 @@ export default function ActualSizeViewer({ work }: { work: Artwork }) {
         </div>
       )}
 
-      <Link
-        href="/"
-        aria-label={t.close}
-        className={`absolute top-4 right-4 z-10 flex size-11 items-center justify-center rounded-full bg-black/40 text-white/80 backdrop-blur transition-opacity duration-500 hover:bg-black/70 hover:text-white ${
+      <div
+        className={`absolute top-4 right-4 z-10 flex gap-2 transition-opacity duration-500 ${
           uiVisible ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-        <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth={1.5}>
-          <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
-        </svg>
-      </Link>
+        <button
+          type="button"
+          onClick={resetToActualSize}
+          aria-label={t.actualSize}
+          title={t.actualSize}
+          className={`flex h-11 min-w-11 items-center justify-center rounded-full bg-black/40 px-3 font-mono text-sm backdrop-blur transition hover:bg-black/70 hover:text-white ${
+            isActualSize ? "text-white/40" : "text-white/90"
+          }`}
+        >
+          1:1
+        </button>
+        <Link
+          href="/"
+          aria-label={t.close}
+          className="flex size-11 items-center justify-center rounded-full bg-black/40 text-white/80 backdrop-blur transition hover:bg-black/70 hover:text-white"
+        >
+          <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth={1.5}>
+            <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+          </svg>
+        </Link>
+      </div>
     </main>
   );
 }
 
-/** OpenSeadragon zoom is "image width / container width", so 1:1 depends on the container. */
-function lockedZoom(targetWidthPx: number, containerWidthPx: number) {
-  const zoom = targetWidthPx / Math.max(containerWidthPx, 1);
-  return { defaultZoomLevel: zoom, minZoomLevel: zoom, maxZoomLevel: zoom };
+/**
+ * OpenSeadragon zoom is "image width / container width", so 1:1 depends on the container.
+ * Zoom out to a bit below fit-to-screen; zoom in to 2× the image's native resolution
+ * (or 2× actual size for images too small to reach it).
+ */
+function zoomLimits({
+  targetWidthPx,
+  container,
+  aspect,
+  imageWidthPx,
+}: {
+  targetWidthPx: number;
+  container: { x: number; y: number };
+  aspect: number;
+  imageWidthPx?: number;
+}) {
+  const containerWidth = Math.max(container.x, 1);
+  const actual = targetWidthPx / containerWidth;
+  const fit = Math.min(1, container.y / containerWidth / aspect);
+  const native = imageWidthPx ? imageWidthPx / (containerWidth * window.devicePixelRatio) : actual * 8;
+  return {
+    defaultZoomLevel: actual,
+    minZoomLevel: Math.min(actual, fit) * 0.5,
+    maxZoomLevel: Math.max(actual, native) * 2,
+  };
 }
 
 /** Visible while the pointer is active; fades out after `idleMs` of no movement. */
