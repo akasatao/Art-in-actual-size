@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+html,
+body {
+  background: #000;
+  color: #e5e5e5;
+  height: 100%;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

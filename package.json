@@ -1,0 +1,26 @@
+{
+  "name": "art-in-actual-size",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "tiles": "node scripts/build-tiles.mjs"
+  },
+  "dependencies": {
+    "next": "^16.3.7",
+    "openseadragon": "^6.1.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5"
+  }
+}

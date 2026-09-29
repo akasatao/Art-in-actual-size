@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.cache/
+public/iiif/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.env*.local
+.vercel
+npm-debug.log*
+.DS_Store

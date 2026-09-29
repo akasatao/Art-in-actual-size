@@ -1,0 +1,152 @@
+[
+  {
+    "id": "seurat-grand-jatte",
+    "title": "A Sunday on La Grande Jatte — 1884",
+    "artist": "Georges Seurat",
+    "year": "1884–1886",
+    "ja": { "title": "グランド・ジャット島の日曜日の午後", "artist": "ジョルジュ・スーラ", "year": "1884–1886年" },
+    "widthMm": 3081,
+    "heightMm": 2075,
+    "iiifUrl": "/iiif/seurat-grand-jatte/info.json"
+  },
+  {
+    "id": "gogh-irises",
+    "title": "Irises",
+    "artist": "Vincent van Gogh",
+    "year": "1889",
+    "ja": { "title": "アイリス", "artist": "フィンセント・ファン・ゴッホ", "year": "1889年" },
+    "widthMm": 943,
+    "heightMm": 743,
+    "iiifUrl": "https://media.getty.edu/iiif/image/8c255d80-7382-46db-9fa8-892c0d37247e/info.json"
+  },
+  {
+    "id": "gogh-bedroom",
+    "title": "The Bedroom",
+    "artist": "Vincent van Gogh",
+    "year": "1889",
+    "ja": { "title": "アルルの寝室", "artist": "フィンセント・ファン・ゴッホ", "year": "1889年" },
+    "widthMm": 923,
+    "heightMm": 736,
+    "iiifUrl": "/iiif/gogh-bedroom/info.json"
+  },
+  {
+    "id": "wood-american-gothic",
+    "title": "American Gothic",
+    "artist": "Grant Wood",
+    "year": "1930",
+    "ja": { "title": "アメリカン・ゴシック", "artist": "グラント・ウッド", "year": "1930年" },
+    "widthMm": 653,
+    "heightMm": 780,
+    "iiifUrl": "/iiif/wood-american-gothic/info.json"
+  },
+  {
+    "id": "rembrandt-night-watch",
+    "title": "The Night Watch",
+    "artist": "Rembrandt van Rijn",
+    "year": "1642",
+    "ja": { "title": "夜警", "artist": "レンブラント・ファン・レイン", "year": "1642年" },
+    "widthMm": 4625,
+    "heightMm": 3875,
+    "iiifUrl": "https://iiif.micr.io/ERwIn/info.json"
+  },
+  {
+    "id": "vermeer-milkmaid",
+    "title": "The Milkmaid",
+    "artist": "Johannes Vermeer",
+    "year": "c. 1660",
+    "ja": { "title": "牛乳を注ぐ女", "artist": "ヨハネス・フェルメール", "year": "1660年頃" },
+    "widthMm": 410,
+    "heightMm": 455,
+    "iiifUrl": "https://iiif.micr.io/QkOGy/info.json"
+  },
+  {
+    "id": "vermeer-woman-holding-a-balance",
+    "title": "Woman Holding a Balance",
+    "artist": "Johannes Vermeer",
+    "year": "c. 1664",
+    "ja": { "title": "天秤を持つ女", "artist": "ヨハネス・フェルメール", "year": "1664年頃" },
+    "widthMm": 355,
+    "heightMm": 397,
+    "iiifUrl": "https://api.nga.gov/iiif/c948cf32-e6c7-41a0-a053-0ad0562960c4/info.json"
+  },
+  {
+    "id": "leonardo-ginevra-de-benci",
+    "title": "Ginevra de' Benci",
+    "artist": "Leonardo da Vinci",
+    "year": "c. 1474/1478",
+    "ja": { "title": "ジネーヴラ・デ・ベンチの肖像", "artist": "レオナルド・ダ・ヴィンチ", "year": "1474/1478年頃" },
+    "widthMm": 370,
+    "heightMm": 381,
+    "iiifUrl": "https://api.nga.gov/iiif/8f29e3c9-a289-4d53-abf0-31a66e9e98fa/info.json"
+  },
+  {
+    "id": "gogh-self-portrait-1889",
+    "title": "Self-Portrait",
+    "artist": "Vincent van Gogh",
+    "year": "1889",
+    "ja": { "title": "自画像", "artist": "フィンセント・ファン・ゴッホ", "year": "1889年" },
+    "widthMm": 445,
+    "heightMm": 578,
+    "iiifUrl": "https://api.nga.gov/iiif/54ee6643-e0f9-4b92-a1d2-441e5108724d/info.json"
+  },
+  {
+    "id": "monet-japanese-footbridge",
+    "title": "The Japanese Footbridge",
+    "artist": "Claude Monet",
+    "year": "1899",
+    "ja": { "title": "日本の橋", "artist": "クロード・モネ", "year": "1899年" },
+    "widthMm": 1016,
+    "heightMm": 813,
+    "iiifUrl": "https://api.nga.gov/iiif/0b9cefb5-1ee4-401a-8154-8d4039191a28/info.json"
+  },
+  {
+    "id": "rembrandt-syndics",
+    "title": "The Syndics",
+    "artist": "Rembrandt van Rijn",
+    "year": "1662",
+    "ja": { "title": "織物商組合の見本調査官たち", "artist": "レンブラント・ファン・レイン", "year": "1662年" },
+    "widthMm": 2790,
+    "heightMm": 1915,
+    "iiifUrl": "https://iiif.micr.io/cWWQE/info.json"
+  },
+  {
+    "id": "rembrandt-self-portrait-1659",
+    "title": "Self-Portrait",
+    "artist": "Rembrandt van Rijn",
+    "year": "1659",
+    "ja": { "title": "自画像", "artist": "レンブラント・ファン・レイン", "year": "1659年" },
+    "widthMm": 660,
+    "heightMm": 845,
+    "iiifUrl": "https://api.nga.gov/iiif/5dc133fb-5304-4ccb-b715-9361f638f281/info.json"
+  },
+  {
+    "id": "rembrandt-apostle-paul",
+    "title": "Self-portrait as the Apostle Paul",
+    "artist": "Rembrandt van Rijn",
+    "year": "1661",
+    "ja": { "title": "使徒パウロに扮した自画像", "artist": "レンブラント・ファン・レイン", "year": "1661年" },
+    "widthMm": 770,
+    "heightMm": 910,
+    "iiifUrl": "https://iiif.micr.io/wqcDn/info.json"
+  },
+  {
+    "id": "whistler-white-girl",
+    "title": "Symphony in White, No. 1: The White Girl",
+    "artist": "James McNeill Whistler",
+    "year": "1861–1863, 1872",
+    "ja": { "title": "白のシンフォニー第1番：白の少女", "artist": "ジェームズ・マクニール・ホイッスラー", "year": "1861–1863年、1872年" },
+    "widthMm": 1079,
+    "heightMm": 2130,
+    "iiifUrl": "https://api.nga.gov/iiif/4133ddae-6de0-4e9f-8ded-a43b2ac6c8c1/info.json"
+  },
+  {
+    "id": "hokusai-great-wave",
+    "title": "Under the Wave off Kanagawa",
+    "artist": "Katsushika Hokusai",
+    "year": "c. 1830–1832",
+    "ja": { "title": "冨嶽三十六景 神奈川沖浪裏", "artist": "葛飾北斎", "year": "1830–1832年頃" },
+    "widthMm": 375,
+    "heightMm": 254,
+    "iiifUrl": "https://iiif.micr.io/MFiyA/info.json"
+  }
+]
