@@ -16,9 +16,38 @@ export type Artwork = Caption & {
   ja: Caption;
 };
 
-/** Chronological by the first year in `year` (e.g. "c. 1474/1478" → 1474); ties keep file order. */
-export const works: Artwork[] = [...worksData].sort((a, b) => startYear(a) - startYear(b));
+export type SortKey = "year" | "size" | "name";
+export type SortOrder = "asc" | "desc";
 
+export const SORT_KEYS: SortKey[] = ["year", "size", "name"];
+export const SORT_ORDERS: SortOrder[] = ["asc", "desc"];
+
+export const works: Artwork[] = sortWorks(worksData, "year", "asc", "en");
+
+/** Stable: ties fall back to year, then keep file order. */
+export function sortWorks(
+  list: Artwork[],
+  key: SortKey,
+  order: SortOrder,
+  locale: Locale,
+): Artwork[] {
+  const direction = order === "asc" ? 1 : -1;
+  const compare = (a: Artwork, b: Artwork) => {
+    switch (key) {
+      case "year":
+        return startYear(a) - startYear(b);
+      case "size":
+        return a.widthMm * a.heightMm - b.widthMm * b.heightMm;
+      case "name":
+        return captionFor(a, locale).title.localeCompare(captionFor(b, locale).title, locale);
+    }
+  };
+  return [...list].sort(
+    (a, b) => direction * compare(a, b) || startYear(a) - startYear(b),
+  );
+}
+
+/** First year in `year`, e.g. "c. 1474/1478" → 1474. */
 function startYear(work: Artwork): number {
   const match = work.year.match(/\d{4}/);
   return match ? Number(match[0]) : Number.POSITIVE_INFINITY;

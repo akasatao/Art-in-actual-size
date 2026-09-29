@@ -1,17 +1,32 @@
 "use client";
 
 import Link from "next/link";
+import { useMemo } from "react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import SegmentedControl from "@/components/SegmentedControl";
 import { useRequiredPxPerMm } from "@/lib/calibration";
 import { useLocale, useMessages, type Locale } from "@/lib/i18n";
-import { saveShowRuler, useShowRuler } from "@/lib/preferences";
-import { captionFor, iiifImageUrl, type Artwork } from "@/lib/works";
+import {
+  saveShowRuler,
+  saveSortKey,
+  saveSortOrder,
+  useShowRuler,
+  useSortKey,
+  useSortOrder,
+} from "@/lib/preferences";
+import { captionFor, iiifImageUrl, sortWorks, type Artwork } from "@/lib/works";
 
 export default function WorkGrid({ works }: { works: Artwork[] }) {
   const pxPerMm = useRequiredPxPerMm();
   const showRuler = useShowRuler();
+  const sortKey = useSortKey();
+  const sortOrder = useSortOrder();
   const locale = useLocale();
   const t = useMessages();
+  const sortedWorks = useMemo(
+    () => sortWorks(works, sortKey, sortOrder, locale),
+    [works, sortKey, sortOrder, locale],
+  );
   if (pxPerMm === undefined) return <div className="h-dvh bg-black" />;
 
   return (
@@ -46,8 +61,32 @@ export default function WorkGrid({ works }: { works: Artwork[] }) {
         </Link>
       </div>
 
+      <div className="mx-auto mb-8 flex max-w-6xl flex-wrap items-center gap-x-4 gap-y-2 pt-4">
+        <span className="text-xs text-neutral-500">{t.sortBy}</span>
+        <SegmentedControl
+          label={t.sortBy}
+          options={[
+            { value: "year", label: t.sortYear },
+            { value: "size", label: t.sortSize },
+            { value: "name", label: t.sortName },
+          ]}
+          value={sortKey}
+          onChange={saveSortKey}
+        />
+        <span aria-hidden className="h-4 w-px bg-neutral-800" />
+        <SegmentedControl
+          label={t.sortDirection}
+          options={[
+            { value: "asc", label: t.ascending },
+            { value: "desc", label: t.descending },
+          ]}
+          value={sortOrder}
+          onChange={saveSortOrder}
+        />
+      </div>
+
       <ul className="mx-auto grid max-w-6xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-        {works.map((work) => (
+        {sortedWorks.map((work) => (
           <li key={work.id}>
             <Link href={`/view/${work.id}`} className="group block">
               <div className="flex aspect-square items-center justify-center bg-neutral-950 p-6">

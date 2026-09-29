@@ -24,6 +24,13 @@ const messages = {
     calibration: "キャリブレーション",
     close: "閉じる",
     loadFailed: "画像を読み込めませんでした",
+    sortBy: "並び順",
+    sortYear: "年代",
+    sortSize: "大きさ",
+    sortName: "名前",
+    sortDirection: "順序",
+    ascending: "昇順",
+    descending: "降順",
   },
   en: {
     languageLabel: "Language",
@@ -39,6 +46,13 @@ const messages = {
     calibration: "Calibration",
     close: "Close",
     loadFailed: "Could not load the image",
+    sortBy: "Sort by",
+    sortYear: "Year",
+    sortSize: "Size",
+    sortName: "Name",
+    sortDirection: "Order",
+    ascending: "Ascending",
+    descending: "Descending",
   },
 } satisfies Record<Locale, Record<string, string>>;
 
