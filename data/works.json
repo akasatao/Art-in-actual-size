@@ -148,5 +148,255 @@
     "widthMm": 375,
     "heightMm": 254,
     "iiifUrl": "https://iiif.micr.io/MFiyA/info.json"
+  },
+  {
+    "id": "eyck-annunciation",
+    "title": "The Annunciation",
+    "artist": "Jan van Eyck",
+    "year": "c. 1434/1436",
+    "ja": { "title": "受胎告知", "artist": "ヤン・ファン・エイク", "year": "1434/1436年頃" },
+    "widthMm": 341,
+    "heightMm": 902,
+    "iiifUrl": "https://api.nga.gov/iiif/46633bd6-4834-40fb-8ce0-fb975c731dc1/info.json"
+  },
+  {
+    "id": "botticelli-adoration-of-the-magi",
+    "title": "The Adoration of the Magi",
+    "artist": "Sandro Botticelli",
+    "year": "c. 1478/1482",
+    "ja": { "title": "東方三博士の礼拝", "artist": "サンドロ・ボッティチェリ", "year": "1478/1482年頃" },
+    "widthMm": 1020,
+    "heightMm": 680,
+    "iiifUrl": "https://api.nga.gov/iiif/0fd27212-b70a-4a0b-9e7c-ed0d8bbe7ebf/info.json"
+  },
+  {
+    "id": "bosch-death-and-the-miser",
+    "title": "Death and the Miser",
+    "artist": "Hieronymus Bosch",
+    "year": "c. 1485/1490",
+    "ja": { "title": "死と守銭奴", "artist": "ヒエロニムス・ボス", "year": "1485/1490年頃" },
+    "widthMm": 310,
+    "heightMm": 930,
+    "iiifUrl": "https://api.nga.gov/iiif/03ee67ee-dd0e-443f-84ef-ede5f62ce0cd/info.json"
+  },
+  {
+    "id": "raphael-alba-madonna",
+    "title": "The Alba Madonna",
+    "artist": "Raphael",
+    "year": "c. 1510",
+    "ja": { "title": "アルバの聖母", "artist": "ラファエロ・サンティ", "year": "1510年頃" },
+    "widthMm": 945,
+    "heightMm": 945,
+    "iiifUrl": "https://api.nga.gov/iiif/f033a552-2901-4c21-95ed-93d13e598632/info.json"
+  },
+  {
+    "id": "titian-venus-with-a-mirror",
+    "title": "Venus with a Mirror",
+    "artist": "Titian",
+    "year": "c. 1555",
+    "ja": { "title": "鏡を見るヴィーナス", "artist": "ティツィアーノ・ヴェチェッリオ", "year": "1555年頃" },
+    "widthMm": 1055,
+    "heightMm": 1245,
+    "iiifUrl": "https://api.nga.gov/iiif/5174ca9a-42e7-4420-b5e5-ad063a9092f6/info.json"
+  },
+  {
+    "id": "arcimboldo-four-seasons-in-one-head",
+    "title": "Four Seasons in One Head",
+    "artist": "Giuseppe Arcimboldo",
+    "year": "c. 1590",
+    "ja": { "title": "一つの頭部に描かれた四季", "artist": "ジュゼッペ・アルチンボルド", "year": "1590年頃" },
+    "widthMm": 447,
+    "heightMm": 604,
+    "iiifUrl": "https://api.nga.gov/iiif/bbb48182-d0e5-4a88-8759-6dda58d05d90/info.json"
+  },
+  {
+    "id": "greco-laocoon",
+    "title": "Laocoön",
+    "artist": "El Greco",
+    "year": "c. 1610/1614",
+    "ja": { "title": "ラオコーン", "artist": "エル・グレコ", "year": "1610/1614年頃" },
+    "widthMm": 1725,
+    "heightMm": 1375,
+    "iiifUrl": "https://api.nga.gov/iiif/b9047a35-7e24-45bc-bd99-ea19137bc724/info.json"
+  },
+  {
+    "id": "vermeer-woman-reading-a-letter",
+    "title": "Woman Reading a Letter",
+    "artist": "Johannes Vermeer",
+    "year": "c. 1663",
+    "ja": { "title": "手紙を読む青衣の女", "artist": "ヨハネス・フェルメール", "year": "1663年頃" },
+    "widthMm": 390,
+    "heightMm": 465,
+    "iiifUrl": "https://iiif.micr.io/RwfHG/info.json"
+  },
+  {
+    "id": "vermeer-lady-writing",
+    "title": "A Lady Writing",
+    "artist": "Johannes Vermeer",
+    "year": "c. 1665",
+    "ja": { "title": "手紙を書く女", "artist": "ヨハネス・フェルメール", "year": "1665年頃" },
+    "widthMm": 399,
+    "heightMm": 450,
+    "iiifUrl": "https://api.nga.gov/iiif/ea55879e-57f1-494d-9043-6dedb384bdc8/info.json"
+  },
+  {
+    "id": "rembrandt-jewish-bride",
+    "title": "The Jewish Bride",
+    "artist": "Rembrandt van Rijn",
+    "year": "c. 1665–1669",
+    "ja": { "title": "ユダヤの花嫁", "artist": "レンブラント・ファン・レイン", "year": "1665–1669年頃" },
+    "widthMm": 1665,
+    "heightMm": 1215,
+    "iiifUrl": "https://iiif.micr.io/uRWXq/info.json"
+  },
+  {
+    "id": "vermeer-girl-with-the-red-hat",
+    "title": "Girl with the Red Hat",
+    "artist": "Johannes Vermeer",
+    "year": "c. 1669",
+    "ja": { "title": "赤い帽子の娘", "artist": "ヨハネス・フェルメール", "year": "1669年頃" },
+    "widthMm": 180,
+    "heightMm": 228,
+    "iiifUrl": "https://api.nga.gov/iiif/b705a403-3496-42e8-abf5-a37e34c32198/info.json"
+  },
+  {
+    "id": "copley-watson-and-the-shark",
+    "title": "Watson and the Shark",
+    "artist": "John Singleton Copley",
+    "year": "1778",
+    "ja": { "title": "ワトソンと鮫", "artist": "ジョン・シングルトン・コプリー", "year": "1778年" },
+    "widthMm": 2297,
+    "heightMm": 1821,
+    "iiifUrl": "https://api.nga.gov/iiif/b38ce693-ba56-4953-9c2c-d8139fe4b059/info.json"
+  },
+  {
+    "id": "turner-dogana-and-salute",
+    "title": "The Dogana and Santa Maria della Salute, Venice",
+    "artist": "Joseph Mallord William Turner",
+    "year": "1843",
+    "ja": { "title": "ヴェネツィア、ドガーナとサンタ・マリア・デッラ・サルーテ聖堂", "artist": "ジョゼフ・マロード・ウィリアム・ターナー", "year": "1843年" },
+    "widthMm": 930,
+    "heightMm": 620,
+    "iiifUrl": "https://api.nga.gov/iiif/132e789c-27da-4f54-a68d-3e2b691a9448/info.json"
+  },
+  {
+    "id": "manet-old-musician",
+    "title": "The Old Musician",
+    "artist": "Edouard Manet",
+    "year": "1862",
+    "ja": { "title": "老音楽家", "artist": "エドゥアール・マネ", "year": "1862年" },
+    "widthMm": 2482,
+    "heightMm": 1874,
+    "iiifUrl": "https://api.nga.gov/iiif/8d7eff38-fff0-4f9b-9e36-9088b412864e/info.json"
+  },
+  {
+    "id": "monet-woman-with-a-parasol",
+    "title": "Woman with a Parasol - Madame Monet and Her Son",
+    "artist": "Claude Monet",
+    "year": "1875",
+    "ja": { "title": "日傘をさす女、モネ夫人と息子", "artist": "クロード・モネ", "year": "1875年" },
+    "widthMm": 810,
+    "heightMm": 1000,
+    "iiifUrl": "https://api.nga.gov/iiif/99758d9d-c10b-4d02-a198-7e49afb1f3a6/info.json"
+  },
+  {
+    "id": "renoir-girl-with-a-watering-can",
+    "title": "A Girl with a Watering Can",
+    "artist": "Pierre-Auguste Renoir",
+    "year": "1876",
+    "ja": { "title": "じょうろを持つ少女", "artist": "ピエール＝オーギュスト・ルノワール", "year": "1876年" },
+    "widthMm": 730,
+    "heightMm": 1000,
+    "iiifUrl": "https://api.nga.gov/iiif/bcc517e0-84c3-4e21-8c08-c9a0181ced29/info.json"
+  },
+  {
+    "id": "cezanne-mont-sainte-victoire",
+    "title": "Montagne Sainte-Victoire, from near Gardanne",
+    "artist": "Paul Cézanne",
+    "year": "c. 1887",
+    "ja": { "title": "ガルダンヌ近郊から見たサント＝ヴィクトワール山", "artist": "ポール・セザンヌ", "year": "1887年頃" },
+    "widthMm": 913,
+    "heightMm": 672,
+    "iiifUrl": "https://api.nga.gov/iiif/ab3bbe10-cfa7-479b-86df-d13a476e975c/info.json"
+  },
+  {
+    "id": "gogh-farmhouse-in-provence",
+    "title": "Farmhouse in Provence",
+    "artist": "Vincent van Gogh",
+    "year": "1888",
+    "ja": { "title": "プロヴァンスの農家", "artist": "フィンセント・ファン・ゴッホ", "year": "1888年" },
+    "widthMm": 609,
+    "heightMm": 461,
+    "iiifUrl": "https://api.nga.gov/iiif/51c369a2-cc20-43f6-8262-25877c4377eb/info.json"
+  },
+  {
+    "id": "seurat-port-en-bessin",
+    "title": "Seascape at Port-en-Bessin, Normandy",
+    "artist": "Georges Seurat",
+    "year": "1888",
+    "ja": { "title": "ポール＝アン＝ベッサンの海、ノルマンディー", "artist": "ジョルジュ・スーラ", "year": "1888年" },
+    "widthMm": 809,
+    "heightMm": 651,
+    "iiifUrl": "https://api.nga.gov/iiif/f395c5e5-6711-487e-8c1b-747c698d1ef9/info.json"
+  },
+  {
+    "id": "monet-wheatstacks-snow-effect-morning",
+    "title": "Wheatstacks, Snow Effect, Morning",
+    "artist": "Claude Monet",
+    "year": "1891",
+    "ja": { "title": "積みわら、雪の効果、朝", "artist": "クロード・モネ", "year": "1891年" },
+    "widthMm": 1003,
+    "heightMm": 648,
+    "iiifUrl": "https://media.getty.edu/iiif/image/c7a070ce-bae3-4424-8ad3-55e3dea5e1ff/info.json"
+  },
+  {
+    "id": "gauguin-fatata-te-miti",
+    "title": "Fatata te Miti (By the Sea)",
+    "artist": "Paul Gauguin",
+    "year": "1892",
+    "ja": { "title": "ファタタ・テ・ミティ（海辺で）", "artist": "ポール・ゴーギャン", "year": "1892年" },
+    "widthMm": 915,
+    "heightMm": 679,
+    "iiifUrl": "https://api.nga.gov/iiif/4f9268d4-c250-4dd8-9bee-d08d8942b8d1/info.json"
+  },
+  {
+    "id": "munch-starry-night",
+    "title": "Starry Night",
+    "artist": "Edvard Munch",
+    "year": "1893",
+    "ja": { "title": "星月夜", "artist": "エドヴァルド・ムンク", "year": "1893年" },
+    "widthMm": 1403,
+    "heightMm": 1359,
+    "iiifUrl": "https://media.getty.edu/iiif/image/5c21ce64-6ee9-4c39-a276-4a18ab412e5b/info.json"
+  },
+  {
+    "id": "degas-four-dancers",
+    "title": "Four Dancers",
+    "artist": "Edgar Degas",
+    "year": "c. 1899",
+    "ja": { "title": "4人の踊り子", "artist": "エドガー・ドガ", "year": "1899年頃" },
+    "widthMm": 1802,
+    "heightMm": 1511,
+    "iiifUrl": "https://api.nga.gov/iiif/8677586b-668f-42c9-b76c-f4ab7bdac80d/info.json"
+  },
+  {
+    "id": "rousseau-tropical-forest-with-monkeys",
+    "title": "Tropical Forest with Monkeys",
+    "artist": "Henri Rousseau",
+    "year": "1910",
+    "ja": { "title": "猿のいる熱帯の森", "artist": "アンリ・ルソー", "year": "1910年" },
+    "widthMm": 1625,
+    "heightMm": 1295,
+    "iiifUrl": "https://api.nga.gov/iiif/95f1ff73-c4e9-45d4-ae3a-79837c4926d8/info.json"
+  },
+  {
+    "id": "klimt-baby-cradle",
+    "title": "Baby (Cradle)",
+    "artist": "Gustav Klimt",
+    "year": "1917/1918",
+    "ja": { "title": "赤ん坊（揺りかご）", "artist": "グスタフ・クリムト", "year": "1917/1918年" },
+    "widthMm": 1104,
+    "heightMm": 1109,
+    "iiifUrl": "https://api.nga.gov/iiif/c9129cd8-4893-443a-ac43-8a64fdab5852/info.json"
   }
 ]
