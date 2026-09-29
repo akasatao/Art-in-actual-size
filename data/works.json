@@ -7,7 +7,7 @@
     "ja": { "title": "グランド・ジャット島の日曜日の午後", "artist": "ジョルジュ・スーラ", "year": "1884–1886年" },
     "widthMm": 3081,
     "heightMm": 2075,
-    "iiifUrl": "/iiif/seurat-grand-jatte/info.json"
+    "iiifUrl": "https://fivsyipjjvxterzrshhu.supabase.co/storage/v1/object/public/iiif/seurat-grand-jatte/info.json"
   },
   {
     "id": "gogh-irises",
@@ -27,7 +27,7 @@
     "ja": { "title": "アルルの寝室", "artist": "フィンセント・ファン・ゴッホ", "year": "1889年" },
     "widthMm": 923,
     "heightMm": 736,
-    "iiifUrl": "/iiif/gogh-bedroom/info.json"
+    "iiifUrl": "https://fivsyipjjvxterzrshhu.supabase.co/storage/v1/object/public/iiif/gogh-bedroom/info.json"
   },
   {
     "id": "wood-american-gothic",
@@ -37,7 +37,7 @@
     "ja": { "title": "アメリカン・ゴシック", "artist": "グラント・ウッド", "year": "1930年" },
     "widthMm": 653,
     "heightMm": 780,
-    "iiifUrl": "/iiif/wood-american-gothic/info.json"
+    "iiifUrl": "https://fivsyipjjvxterzrshhu.supabase.co/storage/v1/object/public/iiif/wood-american-gothic/info.json"
   },
   {
     "id": "rembrandt-night-watch",

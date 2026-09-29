@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "tiles": "node scripts/build-tiles.mjs"
+    "tiles": "node scripts/build-tiles.mjs",
+    "upload-tiles": "node --env-file=.env.local scripts/upload-tiles.mjs"
   },
   "dependencies": {
     "next": "^16.3.7",
@@ -15,6 +16,7 @@
     "react-dom": "^19.3.0"
   },
   "devDependencies": {
+    "@supabase/supabase-js": "^2.117.2",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^22",
     "@types/react": "^19.3.0",
