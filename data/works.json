@@ -187,6 +187,7 @@
     "ja": { "title": "アルバの聖母", "artist": "ラファエロ・サンティ", "year": "1510年頃" },
     "widthMm": 945,
     "heightMm": 945,
+    "shape": "round",
     "iiifUrl": "https://api.nga.gov/iiif/f033a552-2901-4c21-95ed-93d13e598632/info.json"
   },
   {

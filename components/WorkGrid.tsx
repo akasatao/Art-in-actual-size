@@ -95,7 +95,9 @@ export default function WorkGrid({ works }: { works: Artwork[] }) {
                   alt=""
                   loading="lazy"
                   draggable={false}
-                  className="max-h-full max-w-full object-contain transition duration-500 group-hover:scale-[1.03]"
+                  className={`max-h-full max-w-full object-contain transition duration-500 group-hover:scale-[1.03] ${
+                    work.shape === "round" ? "rounded-full" : ""
+                  }`}
                   style={{ aspectRatio: `${work.widthMm} / ${work.heightMm}` }}
                 />
               </div>

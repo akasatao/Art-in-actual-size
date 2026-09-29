@@ -12,6 +12,8 @@ export type Artwork = Caption & {
   id: string;
   widthMm: number;
   heightMm: number;
+  /** "round": the painting is the ellipse inscribed in the image (a tondo); the corners are scan background. */
+  shape?: "round";
   iiifUrl: string;
   ja: Caption;
 };
@@ -22,7 +24,7 @@ export type SortOrder = "asc" | "desc";
 export const SORT_KEYS: SortKey[] = ["year", "size", "name"];
 export const SORT_ORDERS: SortOrder[] = ["asc", "desc"];
 
-export const works: Artwork[] = sortWorks(worksData, "year", "asc", "en");
+export const works: Artwork[] = sortWorks(worksData as Artwork[], "year", "asc", "en");
 
 /** Stable: ties fall back to year, then keep file order. */
 export function sortWorks(
